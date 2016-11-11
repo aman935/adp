@@ -6,25 +6,6 @@
 <div class="main_page">
 <head>
 
-<script type="text/javascript">
-    function updateSource() { 
-        
-        
-        var audio = document.getElementById('audio-player');
-        
-        var source = document.getElementById('oggSource');
-        
-        source.src= "/Blue-Browne.ogg";
-        
-        
-        audio.load(); //call this to just preload the audio without playing
-        audio.play(); //call this to play the song right away
-    }
-</script>
-
-
-
-
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head> 
@@ -150,10 +131,30 @@
                                               <div class="col-md-4 player">
                                                     <div class="audio-player">
                                                     <audio id="audio-player"  controls="controls">
-                                                    <source id="oggSource" src="" type="audio/ogg"></source>
+                                                    <source id="oggSource" this.src="source.src" type="audio/ogg"></source>
                                                     <source id="mp3Source" src="" type="audio/mp3"></source>
                                                         </div>
 
+                                                                                 <script type="text/javascript">
+                                
+
+
+      function updateSource() { 
+
+        var audio = document.getElementById('audio-player');
+        var source = document.getElementById('oggSource');
+
+        source.src =  "/Blue Browne.ogg";
+
+       
+        audio.load(); //call this to just preload the audio without playing
+        audio.play(); //call this to play the song right away
+    }
+
+                            </script>
+
+
+                                
                                                 
                                                 <script type="text/javascript">
                                                     $(function(){
@@ -288,9 +289,7 @@
                                 <div class="clearfix"> </div>
                             </div>
                         </div>  
-                <!--//End-banner-->
-                    <!--albums-->
-                    <!-- pop-up-box --> 
+               
                             <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all">
                             <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
                              <script>
@@ -307,7 +306,9 @@
                                         mainClass: 'my-mfp-zoom-in'
                                     });
                                     });
-                            </script>       
+                            </script>   
+
+
                     <!--//pop-up-box -->
                         <div class="albums">
                                 <div class="tittle-head">
@@ -408,9 +409,9 @@
                                     </div>
                                 <!--//discover-view-->
                             </div>
+   
 
-                            <!--//music-left-->
-                            <!--/music-right-->
+                           <button onclick="updateSource()">clickme</button>
                            <div class="music-right">
                                 <!--/video-main-->
                                  <div class="video-main">
@@ -436,8 +437,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                         <button onclick="updateSource()">Item1</button>
-
+                       
                                                 <div class="jp-playlist">
                                                     <ul style="display: block;"><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>PLAYLIST </h2><span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource()" data-value="Blue Browne.mp3" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
                                                 </div>
