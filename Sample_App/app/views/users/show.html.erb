@@ -6,6 +6,22 @@
 <div class="main_page">
 <head>
 
+<script type="text/javascript">
+    function updateSource() { 
+        
+        
+        var audio = document.getElementById('audio-player');
+        
+        var source = document.getElementById('oggSource');
+        
+        source.src= "/Blue-Browne.ogg";
+        
+        
+        audio.load(); //call this to just preload the audio without playing
+        audio.play(); //call this to play the song right away
+    }
+</script>
+
 
 
 
@@ -133,13 +149,12 @@
                                              <!---->
                                               <div class="col-md-4 player">
                                                     <div class="audio-player">
-                                                        <audio id="audio-player"  controls="controls">
-                                                        <source src="/Blue Browne.ogg" type="audio/ogg"></source>
-                                                                <source src="/Blue Browne.mp3" type="audio/mpeg"></source>
-                                                                <source src="/Georgia.ogg" type="audio/ogg"></source>
-                                                                <source src="/Georgia.mp3" type="audio/mpeg"></source></audio>
+                                                    <audio id="audio-player"  controls="controls">
+                                                    <source id="oggSource" src="" type="audio/ogg"></source>
+                                                    <source id="mp3Source" src="" type="audio/mp3"></source>
                                                         </div>
-                                                <!---->
+
+                                                
                                                 <script type="text/javascript">
                                                     $(function(){
                                                       $('#audio-player').mediaelementplayer({
@@ -393,6 +408,7 @@
                                     </div>
                                 <!--//discover-view-->
                             </div>
+
                             <!--//music-left-->
                             <!--/music-right-->
                            <div class="music-right">
@@ -420,8 +436,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                         <button onclick="updateSource()">Item1</button>
+
                                                 <div class="jp-playlist">
-                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0">1. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
+                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>PLAYLIST </h2><span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource()" data-value="Blue Browne.mp3" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
                                                 </div>
                                                 <div class="jp-no-solution" style="display: none;">
                                                     <span>Update Required</span>
@@ -435,88 +453,11 @@
                 <link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
                 <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
                 <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
-                <script type="text/javascript">
-                //<![CDATA[
-                $(document).ready(function(){
-
-                    new jPlayerPlaylist({
-                        jPlayer: "#jquery_jplayer_1",
-                        cssSelectorAncestor: "#jp_container_1"
-                    }, [
-                        
-                        {
-                            title:"1. Ellie-Goulding",
-                            artist:"",
-                            mp4: "/Ellie-Goulding.mp4",
-                            ogv: "/Ellie-Goulding.ogv",
-                            webmv: "/Ellie-Goulding.webm",
-                            poster:"../play1.png"
-                        },
-                        {
-                            title:"2. Mark-Ronson-Uptown",
-                            artist:"",
-                            mp4: "/Mark-Ronson-Uptown.mp4",
-                            ogv: "/Mark-Ronson-Uptown.ogv",
-                            webmv: "/Mark-Ronson-Uptown.webm",
-                            poster:"/assets/play2.png"
-                        },
-                        {
-                            title:"3. Ellie-Goulding",
-                            artist:"",
-                            mp4: "/Ellie-Goulding.mp4",
-                            ogv: "/Ellie-Goulding.ogv",
-                            webmv: "/Ellie-Goulding.webm",
-                            poster:"/assets/play1.png"
-                        },
-                        {
-                            title:"4. Maroon-Sugar",
-                            artist:"",
-                            mp4: "/Maroon-Sugar.mp4",
-                            ogv: "/Maroon-Sugar.ogv",
-                            webmv: "/Maroon-Sugar.webm",
-                            poster:"/play4.png"
-                        },
-                        {
-                            title:"5. Pharrell-Williams",
-                            artist:"",
-                            mp4: "/Pharrell-Williams.mp4",
-                            ogv: "/Pharrell-Williams.ogv",
-                            webmv: "/Pharrell-Williams.webm",
-                            poster:"/assets/play5.png"
-                        },
-                        {
-                            title:"6. Ellie-Goulding",
-                            artist:"",
-                            mp4: "/Ellie-Goulding.mp4",
-                            ogv: "/Ellie-Goulding.ogv",
-                            webmv: "/Ellie-Goulding.webm",
-                            poster:"/assets/play1.png"
-                        },
-                        {
-                            title:"7. Pharrell-Williams",
-                            artist:"",
-                            mp4: "/Pharrell-Williams.mp4",
-                            ogv: "/Pharrell-Williams.ogv",
-                            webmv: "/Pharrell-Williams.webm",
-                            poster:"/assets/play5.png"
-                        }
-                    ], {
-                        swfPath: "../../dist/jplayer",
-                        supplied: "webmv,ogv,mp4",
-                        useStateClassSkin: true,
-                        autoBlur: false,
-                        smoothPlayBar: true,
-                        keyEnabled: true
-                    });
-
-                });
-                //]]>
-                    </script>
-            <!-- //script for play-list -->
-
-                                <!--//video-main-->
-                                <!--/app_store-->
+                
+    
                                       <div class="apps">
+                                      <h3 style="color: white;">LIKES</h3>
+                                     
                                              <div class="clearfix"></div>
                                         </div>
                                   <!--//app_store-->
