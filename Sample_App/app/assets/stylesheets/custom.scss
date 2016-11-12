@@ -70,8 +70,8 @@ textarea {
 }
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 2px;
+  padding-top: 2px;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
@@ -173,7 +173,12 @@ input {
   @extend .has-error;
 
   .form-control {
+<<<<<<< HEAD
     }
+=======
+    
+  }
+>>>>>>> addingSongs
 }
 
 span{
