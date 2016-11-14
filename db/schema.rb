@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20161111205641) do
 
-  create_table "audios", force: :cascade do |t|
+  create_table "songs", force: :cascade do |t|
     t.string   "name"
     t.string   "genre"
     t.string   "path"

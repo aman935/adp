@@ -26,13 +26,13 @@
 
 
       function updateSource() { 
+	  
+          var audio = document.getElementById('audio-player');
+          var source = document.getElementById('mp3Source');
 
-        var audio = document.getElementById('audio-player');
-        var source = document.getElementById('oggSource');
-
-        source.src =  "/Blue Browne.ogg";
+          source.src =  "/BlankSpace.mp3";
 
        
-        audio.load(); //call this to just preload the audio without playing
+          audio.load(); //call this to just preload the audio without playing
         audio.play(); //call this to play the song right away
     }
