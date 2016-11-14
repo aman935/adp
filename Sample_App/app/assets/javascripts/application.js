@@ -25,14 +25,16 @@
 //= require jquery.turbolinks
 
 
-      function updateSource() { 
+      function updateSource(e) { 
+
+        
+        var x = e.getAttribute("data-value");
+
+        // var x = document.getElementById("a1").getAttribute("data-value");
 
         var audio = document.getElementById('audio-player');
         var source = document.getElementById('oggSource');
-
-        source.src =  "/Blue Browne.ogg";
-
-       
+        source.src = x;
         audio.load(); //call this to just preload the audio without playing
         audio.play(); //call this to play the song right away
     }

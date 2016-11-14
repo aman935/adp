@@ -103,13 +103,15 @@
                 <div class="menu-right">
                     <div class="profile_details">       
                           <div class="col-md-4 serch-part">
+                          
                                 <div id="sb-search" class="sb-search">
                                     <%= form_tag("/search", method: "get") do %>
-                                    <%= label_tag(:q, "Search for:") %>
+                                    <%= label_tag(:q, "Search for:",class: 'form-control') %>
                                     <%= text_field_tag(:search) %>
-                                    <%= submit_tag("Search") %>
+                                   <%= submit_tag "Search", class: 'btn btn-default' %>
                                     <% end %>
                                 </div>
+
                             </div>
                               <!-- search-scripts -->
                                     <script src="js/classie.js"></script>
