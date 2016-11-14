@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<div class="app">
+  <head>
+    <title>Pandora | Music Streaming Website</title>
+    
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body style="margin: 0;">
+
+   
+   <%= render 'layouts/header1' %>
+
+    
+      <%= yield %>
+
+        
+     
+
+     
+  </body>
+   </div>
+</html>
