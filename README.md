@@ -1,6 +1,7 @@
 # Pandora | A music streaming web app
 
-## By : 1. Dhairya Verma (B15112)
+## By :
+        1. Dhairya Verma (B15112)
       	2. Kislaya Mishra (B15219)
 	3. Aman Singh (B15207)
 	4. Puneet Yadav (B151)
