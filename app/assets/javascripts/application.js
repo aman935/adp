@@ -23,16 +23,15 @@
 //= require turbolinks
 //= require_tree 
 //= require jquery.turbolinks
+var myPath="/BlankSpace.mp3";
 
+function updateSource(myPath) { 
+    
+    var audio = document.getElementById('audio-player');
+    var source = document.getElementById('mp3Source');
+    source.src = myPath;
+    
+    audio.load(); //call this to just preload the audio without playing
+    audio.play(); //call this to play the song right away
 
-      function updateSource() { 
-	  
-          var audio = document.getElementById('audio-player');
-          var source = document.getElementById('mp3Source');
-
-          source.src =  "/BlankSpace.mp3";
-
-       
-          audio.load(); //call this to just preload the audio without playing
-        audio.play(); //call this to play the song right away
-    }
+}

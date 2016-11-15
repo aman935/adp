@@ -206,8 +206,6 @@
         <!--//discover-view-->
       </div>
       
-      
-      <button onclick="updateSource()">clickme</button>
       <div class="music-right">
         <!--/video-main-->
         <div class="video-main">
@@ -233,9 +231,32 @@
                     </div>
                   </div>
                 </div>
-                
-                <div class="jp-playlist">
-                  <ul style="display: block;"><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>PLAYLIST </h2><span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource()" data-value="Blue Browne.mp3" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
+
+		<div class="jp-playlist">
+                  <div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
+		    <a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0">
+		      <h2>This Week's Top 7 </h2>
+		      <span class="jp-artist"></span>
+		    </a>
+		  </div>
+		  <ul style="display: block;">
+		    
+		    <li><div><a href="javascript:updateSource('/BlankSpace.mp3');" class="jp-playlist-item" tabindex="0">1. Blank Space <span class="jp-artist">by Taylor Swift</span></a>
+		    </div></li>
+		    
+		    <li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:updateSource('/Ellie Goulding - Love Me Like You Do.opus');" class="jp-playlist-item" tabindex="0">2. Love Me Like You Do <span class="jp-artist">by Ellie Goulding</span></a></div></li>
+		    
+		    <li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:updateSource('/Maroon 5 - Sugar.opus');" class="jp-playlist-item" tabindex="0">3. Sugar <span class="jp-artist">by Maroon 5</span></a></div></li>
+		    
+		    <li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:updateSource('/Pharrell Williams - Happy (Official Music Video).opus');" class="jp-playlist-item" tabindex="0">4. Happy<span class="jp-artist">by Pharrell Williams </span></a></div></li>
+		    
+		    <li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:updateSource('/BattleCry.mp3');" class="jp-playlist-item" tabindex="0">5. Battle Cry <span class="jp-artist">by Imagine Dragons</span></a></div></li>
+		    
+		    <li><div><a href="javascript:updateSource('/CountingStars.mp3');" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Counting Stars <span class="jp-artist">by Imagine Dragons</span></a></div></li>
+		    
+		    <li><div><a href="javascript:updateSource('/Rain Over Me.opus');" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Rain Over Me <span class="jp-artist">by Pitbull ft. Mark Anthony</span></a></div></li>
+		    
+		  </ul>
                 </div>
                 <div class="jp-no-solution" style="display: none;">
                   <span>Update Required</span>
@@ -264,6 +285,7 @@
         <!--//end-pricing-tables-->
       </div>
     </div>
+
     <!--//music-right-->
     <div class="clearfix"></div>
     <!-- /w3l-agile-its -->
