@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'jquery-turbolinks'
 gem 'rails',        '5.0.0.1'
@@ -17,7 +16,7 @@ gem 'jbuilder',     '2.4.1'
 group :development, :test do
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
-end
+  end
 
 group :development do
   gem 'web-console',           '3.1.1'
