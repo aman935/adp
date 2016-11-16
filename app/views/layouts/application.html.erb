@@ -3,32 +3,38 @@
 <html>
 <div class="app">
   <head>
-    <title>Pandora | Music Streaming Website</title>
+    <title>nn</title>
+    
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
   <body style="padding-top:30px;
-	       margin:0;
-	       background: url(/assets/bg.jpg)no-repeat; 
-	       -webkit-background-size: cover;
-	       -moz-background-size: cover;
-	       -o-background-size: cover;
-	       -ms-background-size: cover;
-	       background-size: cover;
-	       font-family: 'Roboto Condensed', sans-serif;
-	       background-attachment: fixed; ">
+  margin:0;
+  background: url(/assets/a.jpg)no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-attachment: fixed; ">
+
     <%= render 'layouts/header' %>
     <div class="container-fluid">
       <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <br>
+
+    <br>
       <%= yield %>
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
+      
+
     </div>
+   
   </body>
-</div>
+   </div>
 </html>

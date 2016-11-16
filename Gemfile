@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'jquery-turbolinks'
 gem 'rails',        '5.0.0.1'
@@ -12,7 +13,7 @@ gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
-gem 'heroku'
+
 group :development, :test do
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri

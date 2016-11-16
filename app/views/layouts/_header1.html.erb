@@ -1,23 +1,26 @@
-<!-- /w3layouts-agile -->
-<body class="sticky-header left-side-collapsed"  onload="initMap()">
-  <section>
-    <!-- left side start-->
-    <div class="left-side sticky-left-side">
-      
-      <!--logo and iconic logo start-->
-      <div class="logo">
-        <h1><a href="index.html">Mosai<span>c</span></a></h1>
-      </div>
-      <div class="logo-icon text-center">
-        <%= link_to "P", '/' %>
-      </div>
-      <!-- /w3l-agile -->
-      <!--logo and iconic logo end-->
-      <div class="left-side-inner">
-	
-        <!--sidebar nav start-->
-        <ul class="nav nav-pills nav-stacked custom-nav">
-          <li class="active"><a href="index.html"><i class="lnr lnr-home"></i><span>Home</span></a></li>
+</head> 
+
+
+         <!-- /w3layouts-agile -->
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+      <!-- left side start-->
+        <div class="left-side sticky-left-side">
+
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <h1><a href="index.html">Mosai<span>c</span></a></h1>
+            </div>
+            <div class="logo-icon text-center">
+                <%= link_to "P", '/' %>
+            </div>
+     <!-- /w3l-agile -->
+            <!--logo and iconic logo end-->
+            <div class="left-side-inner">
+
+                <!--sidebar nav start-->
+                    <ul class="nav nav-pills nav-stacked custom-nav">
+                        <li class="active"><a href="index.html"><i class="lnr lnr-home"></i><span>Home</span></a></li>
                         <li><a href="radio.html"><i class="camera"></i> <span>Radio</span></a></li>
                         <li><a href="#" data-toggle="modal" data-target="#myModal1"><i class="fa fa-th"></i><span>Apps</span></a></li>
                         <li><a href="radio.html"><i class="lnr lnr-users"></i> <span>Artists</span></a></li> 
@@ -100,13 +103,15 @@
                 <div class="menu-right">
                     <div class="profile_details">       
                           <div class="col-md-4 serch-part">
+                          
                                 <div id="sb-search" class="sb-search">
                                     <%= form_tag("/search", method: "get") do %>
-                                    <%= label_tag(:q, "Search for:") %>
+                                    <%= label_tag(:q, "Search for:",class: 'form-control') %>
                                     <%= text_field_tag(:search) %>
-                                    <%= submit_tag("Search") %>
+                                   <%= submit_tag "Search", class: 'btn btn-default' %>
                                     <% end %>
                                 </div>
+
                             </div>
                               <!-- search-scripts -->
                                     <script src="js/classie.js"></script>

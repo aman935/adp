@@ -1,3 +1,31 @@
 // Place all the styles related to the Songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jp-playlist2{
+	width: 60%;
+	margin:0 auto;
+	background: rgba(aqua,0.6);
+	border: 0.5px;
+	border-style: solid;
+    border-color: black;
+
+}
+
+#songName{
+    font-size: 24px;
+	font-style: bold;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+#songName:hover{
+    color:	#00FFFF;
+}
+
+#arImg{
+	widht: 10px;
+	height: 240px;
+}

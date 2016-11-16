@@ -5,6 +5,7 @@ class CreateAudios < ActiveRecord::Migration[5.0]
       t.string :genre
       t.string :path
       t.string :artist
+      
 
       t.timestamps
     end
