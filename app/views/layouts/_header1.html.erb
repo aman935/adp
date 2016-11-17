@@ -76,10 +76,7 @@
                     </div>
                 </div>
             </div>
-            <!-- //app-->
-     <!-- /w3l-agile -->
-        <!-- signup -->
-           
+
                                     </div>
                                     <div class="clearfix"></div>                                
                                 </div>
@@ -89,27 +86,20 @@
                     </div>
                 </div>
             </div>
-            <!-- //signup -->
-     <!-- /w3l-agile -->
-        <!-- left side end-->
-        <!-- main content start-->
+    
         <div class="main-content">
             <!-- header-starts -->
             <div class="header-section">
-            <!--toggle button start-->
-            <a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
-            <!--toggle button end-->
-            <!--notification menu start -->
+       
                 <div class="menu-right">
                     <div class="profile_details">       
                           <div class="col-md-4 serch-part">
                           
-                                <div id="sb-search" class="sb-search">
-                                    <%= form_tag("/search", method: "get") do %>
-                                    <%= label_tag(:q, "Search for:",class: 'form-control') %>
-                                    <%= text_field_tag(:search) %>
-                                   <%= submit_tag "Search", class: 'btn btn-default' %>
-                                    <% end %>
+                             <div class="search" style="margin-top: 12px">
+                             <%= form_tag(search_path, :method => "get", id: "search-form") do %>
+                             <%= text_field_tag :search, params[:search], placeholder: "Search genre name artist",id: "sbar"%>
+                             <%= submit_tag "Search", :name => nil, class: "btn btn-primary btn-sm",id: "sbutton"%>
+                             <% end %>
                                 </div>
 
                             </div>

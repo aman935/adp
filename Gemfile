@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem "awesome_print", require:"ap"
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'jquery-turbolinks'
 gem 'rails',        '5.0.0.1'
