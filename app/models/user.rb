@@ -12,4 +12,6 @@ class User < ApplicationRecord
 
   has_many :playlists, dependent: :destroy
 
+  acts_as_voter
 end
+
