@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   
 
-  resources :users
-  resources :audios
-  
-end
+  resources :users 
+  resources :audios do
+    member do
+      put "like", to: "audios#upvote"
+      
+    end
 

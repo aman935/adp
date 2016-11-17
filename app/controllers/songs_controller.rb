@@ -5,5 +5,8 @@ class SongsController < ApplicationController
     @count = Audio.count
   	render layout: 'alt'
   end
-
-end
+  def upvote
+    @song=Audio.find(params[:id])
+    @song.upvote_by current_user
+    redirect_to :back
+  end
