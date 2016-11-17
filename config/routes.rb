@@ -13,10 +13,14 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  post '/add', to: 'songs#add'
+  get '/search', to: 'search#showsearch'
   
-
   resources :users
-  resources :audios
-  
+  resources :audios do
+    member do
+      put "like", to: "songs#upvote"
+    end
+  end
 end
 

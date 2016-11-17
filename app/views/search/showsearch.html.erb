@@ -1,0 +1,49 @@
+
+
+<div class="audio-main w3ls">
+	
+	<div class="audio-record-list">
+	<div class="profile">
+			 <div class="profile-top wthree">
+				 <div class="pic-sec">
+					 <div class="pic">
+						 <img src="/assets/searchicon.jpg" alt="<%=@search%>"/>
+					 </div>
+					 <div class="pic_info">
+						 <h2><%=@search.upcase%></h2>
+						 
+					 </div>
+					 <div class="clear"></div>
+				 </div>
+				 			 </div>
+		 </div>
+					
+		</div>
+
+       
+
+		<div class="jp-playlist2">
+		<ul style="display: block;">
+         <% (1..Audio.count).each do |i| %>
+         <% if Audio.find(i).artist.downcase  == @search or Audio.find(i).genre.downcase  == @search or Audio.find(i).name.downcase  == @search  %>
+         
+
+                                                    <ul style="display: block;">
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Audio.find(i).path%>" tabindex="0"><span id="songName"><%= Audio.find(i).name%></span></a>
+
+                                                    <%= link_to "Add to playlist",add_path(:song => Audio.find(i).name,:path => Audio.find(i).path,:id => @u),:method => :post %>
+
+                                                    </div>
+
+                                                    </li>
+
+
+
+
+           <% else %>                                     
+             
+          <% end %>
+
+          <% end %>
+          
+          

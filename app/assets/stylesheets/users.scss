@@ -3,6 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#bannerimg{
+  width: 900px;
+  height: 500px;
+}
+
+
+#sbar{
+    
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    width: 70%;  
+    outline: none;
+    font-size: 1.00em;
+    color: #ffffff;
+    font-weight: 400;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px 0px;
+    text-align: center;
+    margin: 0 0 2em 0em;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    
+}
+
+ #sbar:focus{
+    border-color: #d6921e;
+
+    }
+
+  #sbutton{
+
+  background:#cc0052;
+  cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  }
+
+
+
 #lo{
     color: black;
     font-size: 19px;

@@ -9,11 +9,8 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
-
-            <!--notification menu end -->
-            <!-- //header-ends -->
-     <!-- /w3l-agileits -->
-        <!-- //header-ends -->
+        
+       
             <div id="page-wrapper">
                 <div class="inner-content">
                 
@@ -25,38 +22,35 @@
                                         <ul class="rslides callbacks callbacks1" id="slider4">
                                                 <li>
                                                         <div class="banner-img">
-                                           <img src="/assets/11.jpg" class="img-respo/assets/alt="">
+                                           <img src="/assets/11.jpg" class="img-respo/assets/alt="" id="bannerimg">
                                                          </div>
-                                                        <div class="banner-info">
-                                                                      <a class="trend" href="single.html">TRENDING</a>
-                                                                      <h3>Let Your Home</h3>
-                                                                      <p>Album by <span>Rock star</span></p>
+
+                                                <div class="banner-info">
+                                                                     
+                                                                      <h3>ONE</h3>
+                                                                      <p><span>thing about good music</span>,</p><p>when it hits you,you feel no pain</p>
                                                          </div>
+
+                                                
+                                                        
 
                                                 </li>
                                                 <li>
                                                     <div class="banner-img">
-                                                  <img src="/assets/22.jpg" class="img-respo/assets/alt="">
-                                                         </div>
-                                                        <div class="banner-info">
-                                                                      <a class="trend" href="single.html">TRENDING</a>
-                                                                      <h3>Charis Brown feet</h3>
-                                                                      <p>Album by <span>Rock star</span></p>
+                                                  <img src="/assets/22.jpg" class="img-respo/assets/alt="" id="bannerimg">
                                                          </div>
 
+                                                
+                                                        
 
                                                 </li>
                                                 <li>
                                                  <div class="banner-img">
-                                                 <img src="/assets/33.jpg" class="img-respo/assets/alt="">
-                                                         </div>
-                                                        <div class="banner-info"> 
-                                                                     <a class="trend" href="single.html">TRENDING</a>
-                                                                      <h3>Let Your Home</h3>
-                                                                      <p>Album by <span>Rock star</span></p>
+                                                 <img src="/assets/33.jpg" class="img-respo/assets/alt="" id="bannerimg">
                                                          </div>
 
-                                                     <!-- /w3layouts-agileits -->
+                                                
+                                                        
                                                 </li>
                                             </ul>
                                         </div>
@@ -105,18 +99,17 @@
                             </script>   
 
 
-                    <!--//pop-up-box -->
+                    
                         <div class="albums">
                                 <div class="tittle-head">
-                                   
-                                    
-                                    <div class="clearfix"> </div>
-                                </div>
+                                            <h3 class="tittle">Top Artists</h3>
+                                            <div class="clearfix"> </div>
+                                        </div>
 <% (1..(Singer.count)).each do |i| %>
         
 
                                 <div class="col-md-3 content-grid">
-                                <%= link_to image_tag(Singer.find(i).name, id: "arImg"), audio_path(:id => Singer.find(i).name) %>
+                                <%= link_to image_tag(Singer.find(i).name, id: "arImg"), audio_path(:id => Singer.find(i).name,:uid => @user) %>
                                 <span style="font-size: 22px"><%=Singer.find(i).name%></span>
                                 </div>
 
@@ -126,48 +119,23 @@
                                 
                                             <div class="clearfix"> </div>
                                         </div>
-                    <!--//End-albums-->
-                        <!--//discover-view-->
+                 
                         
                         <div class="albums second">
                                         <div class="tittle-head">
-                                            <h3 class="tittle">Discover <span class="new">View</span></h3>
-                                            <a href="index.html"><h4 class="tittle two">See all</h4></a>
+                                            <h3 class="tittle">Genre</h3>
+                                           
                                             <div class="clearfix"> </div>
                                         </div>
-                                            <div class="col-md-3 content-grid">
-                                                <a href="single.html"><img src="/assets/v11.jpg" title="allbum-name"></a>
-                                                <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="col-md-3 content-grid">
-                                                    <a href="single.html"><img src="/assets/v22.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                                </div>
-                                            <div class="col-md-3 content-grid">
-                                                    <a href="single.html"><img src="/assets/v33.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                                </div>
-                                            <div class="col-md-3 content-grid last-grid">
-                                                    <a href="single.html"><img src="/assets/v44.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="col-md-3 content-grid">
-                                                    <a href="single.html"><img src="/assets/v55.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="col-md-3 content-grid">
-                                                <a href="single.html"><img src="/assets/v66.jpg" title="allbum-name"></a>
-                                                <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="col-md-3 content-grid">
-                                                    <a href="single.html"><img src="/assets/v11.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="col-md-3 content-grid last-grid">
-                                                    <a href="single.html"><img src="/assets/v22.jpg" title="allbum-name"></a>
-                                                    <div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-                                            </div>
-                                            <div class="clearfix"> </div>
+
+
+<% (1..(Genre.count)).each do |i| %>
+                                <div class="col-md-3 content-grid">
+                                <%= link_to image_tag(Genre.find(i).name, id: "arImg"), audio_path(:id => Genre.find(i).name,:uid => @user) %>
+                                <span style="font-size: 22px"><%=Genre.find(i).name%></span>
+                                </div>
+<% end %>
+                                    <div class="clearfix"> </div>
                                     </div>
                                 <!--//discover-view-->
                             </div>
@@ -210,6 +178,43 @@
                                                     <ul style="display: block;"><li class="jp-playlist-current"><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>Top 10</h2> <span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource(this)" data-value="/s1.ogg"  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value = "<%=Audio.find(1).path%>" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist"></span>
                                                     </a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/georgia.ogg"tabindex="0">3. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">4. Maroon-Sugar <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">5. Pharrell-Williams <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">6. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">7. Pharrell-Williams <span class="jp-artist"></span></a></div></li></ul>
                                                 </div>
+                                                <br>
+
+                                                <div class="pre-scrollable">
+
+                                                <div class="jp-playlist">
+                                                    <ul style="display: block;">
+
+   
+
+
+                             <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">Playlist <span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+    <% (2..(Playlist.count+1)).each do |i| %>
+    <% if Playlist.find(i).user_id == @user.id %>
+
+                                                <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Playlist.find(i).path%>" tabindex="0"><%=Playlist.find(i).song%> <span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+   
+                                                                       
+
+    <% else %>                                     
+             
+    <% end %>
+
+    <% end %>                                
+     
+                     
+                                                </ul>
+                                                </div>
+
+                                                </div>
+
+
+
                                                 
                                             </div>
                                         </div>
@@ -230,81 +235,49 @@
                         
                         <div class="review-slider">
                                 <div class="tittle-head">
-                                    <h3 class="tittle">Featured Albums <span class="new"> New</span></h3>
+                                    <h3 class="tittle">Featured Albums<br></h3>
                                     <div class="clearfix"> </div>
                                 </div>
-                                 <ul id="flexiselDemo1">
+                                 <ul>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v1.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Adele21 </div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    <a href="single.html"><img src="/assets/v1.jpg" id="arImg" alt=""/></a>
+                                    <div class="slide-title"><h4></h4></div>
+                                    
+                                        
+                                        
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v2.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Adele21</h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    <a href="single.html"><img src="/assets/v2.jpg" id="arImg" alt=""/></a>
+                                    <div class="slide-title"><h4></h4></div>
+                                    
+                                        
+                                        
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v3.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Shomlock</h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    <a href="single.html"><img src="/assets/v3.jpg" id="arImg" alt=""/></a>
+                                    <div class="slide-title"><h4></h4></div>
+                                    
+                                        
+                                        
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v4.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Stuck on a feeling</h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    <a href="single.html"><img src="/assets/v4.jpg" id="arImg" alt=""/></a>
+                                    <div class="slide-title"><h4></h4></div>
+                                    
+                                        
+                                        
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v5.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Ricky Martine </h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    <a href="single.html"><img src="/assets/v5.jpg" id="arImg" alt=""/></a>
+                                    <div class="slide-title"><h4></h4></div>
+                                    
+                                        
+                                        
                                 </li>
-                                <li>
-                                    <a href="single.html"><img src="/assets/v6.jpg" alt=""/></a>
-                                    <div class="slide-title"><h4>Ellie Goluding </h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="single.html"><img src="/assets/v6.jpeg" alt=""/></a>
-                                    <div class="slide-title"><h4>Fifty Shades </h4></div>
-                                    <div class="date-city">
-                                        <h5>Jan-02-16</h5>
-                                        <div class="buy-tickets">
-                                            <a href="single.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                </li>
+                                
                             </ul>
+
+
                             <script type="text/javascript">
                         $(window).load(function() {
                             
@@ -336,21 +309,14 @@
                         </div>
                                 </div>
                             <div class="clearfix"></div>
-                        <!--body wrapper end-->
-     <!-- /w3l-agile -->
+  
                     </div>
-              <!--body wrapper end-->
-             
-        <!--footer section start-->
+     
          
    </section>
 
 
-  
-<script src="js/jquery.nicescroll.js"></script>
-<script src="js/scripts.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.js"></script>
+
 </div>
 </body>
 </html>
