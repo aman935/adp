@@ -192,7 +192,7 @@
                                                     </div>
                                                     </li>
 
-    <% (2..(Playlist.count+1)).each do |i| %>
+    <% (1..(Playlist.count)).each do |i| %>
     <% if Playlist.find(i).user_id == @user.id %>
 
                                                 <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Playlist.find(i).path%>" tabindex="0"><%=Playlist.find(i).song%> <span class="jp-artist"></span></a>

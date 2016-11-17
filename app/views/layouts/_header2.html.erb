@@ -146,7 +146,7 @@
                                              </ul>  
                                             </div>
                                             <div class="col-md-4 login-pop">
-                                                <div id="loginpop">  <%= link_to'<i class="fa fa-sign-out fa-2x"></i><font size="5">Logout</font>'.html_safe , logout_path , method: "delete",id: "lo" %>
+                                                <div id="loginpop"> <span> <%= link_to "LogOut", logout_path , method: "delete",id: "lo"%>,<i class="arrow glyphicon glyphicon-chevron-right"></i></span></a><i class="fa fa-sign-in"></i>
                                                         <div id="loginBox">  
                                            
                                                     </div>
@@ -154,12 +154,11 @@
                                                 <div style="float: right;">
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span id="lo">	    
-	  <i class="fa fa-male fa-2x" aria-hidden="true"></i><font size="5"> Account</font></span>
+        <span id="lo">Account</span><b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-        <li><%= link_to '<i class="fa fa-users fa" aria-hidden="true"></i>  Profile'.html_safe, current_user,id: "la"%></li>
-        <li><%= link_to '<i class="fa fa-cog fa" aria-hidden="true"></i><font size="4">  Settings</font>'.html_safe, edit_user_path(current_user) %></li>
+        <li><%= link_to "Profile", current_user,id: "la"%></li>
+        
         <li class="divider"></li>
         </ul>
         </div>

@@ -3,7 +3,7 @@
 <html>
 <div class="app">
   <head>
-    <title>nn</title>
+    <title><%=full_title(yield(:title) )%></title>
     
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
@@ -14,15 +14,16 @@
   <body style="margin: 0;">
 
    
-   <%= render 'layouts/header1' %>
+   <%= render 'layouts/header2' %>
 
     
       <%= yield %>
 
-      <%= render 'layouts/footer' %>
+        
      
 
      
   </body>
-   </div>
+</div>
 </html>
+
