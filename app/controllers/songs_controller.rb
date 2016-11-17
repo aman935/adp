@@ -16,11 +16,12 @@ class SongsController < ApplicationController
     
   end
 
-end
 
-def upvote
-  @song=Audio.find(params[:id])
-  @song.upvote_by current_user
-  redirect_to :back
-end
 
+  def upvote
+    @link=Audio.find(params[:id])
+    @link.upvote_by current_user
+    redirect_to :back
+  end
+
+end
