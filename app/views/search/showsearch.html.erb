@@ -1,4 +1,5 @@
 
+
 <div class="audio-main w3ls">
 	
 	<div class="audio-record-list">
@@ -6,10 +7,10 @@
 			 <div class="profile-top wthree">
 				 <div class="pic-sec">
 					 <div class="pic">
-						 <img src="/assets/<%=@str%>.jpg" alt="<%=@str%>"/>
+						 <img src="/assets/searchicon.jpg" alt="<%=@search%>"/>
 					 </div>
 					 <div class="pic_info">
-						 <h2><%=@str%></h2>
+						 <h2><%=@search.upcase%></h2>
 						 
 					 </div>
 					 <div class="clear"></div>
@@ -23,8 +24,8 @@
 
 		<div class="jp-playlist2">
 		<ul style="display: block;">
-         <% (1..@count).each do |i| %>
-         <% if Audio.find(i).artist  == @str or Audio.find(i).genre  == @str  %>
+         <% (1..Audio.count).each do |i| %>
+         <% if Audio.find(i).artist.downcase  == @search or Audio.find(i).genre.downcase  == @search or Audio.find(i).name.downcase  == @search  %>
          
 
                                                     <ul style="display: block;">
@@ -46,10 +47,3 @@
           <% end %>
           
           
-
-
-         
-          </ul>
-        </div>
-
-
