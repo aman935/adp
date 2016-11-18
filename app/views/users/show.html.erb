@@ -1,3 +1,6 @@
+<% provide(:title, "Home") %>
+
+
 
 <!DOCTYPE HTML>
 <html>
@@ -8,8 +11,7 @@
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-
-        
+          <%= current_user.id %>
        
             <div id="page-wrapper">
                 <div class="inner-content">
@@ -175,7 +177,7 @@
                                                
                        
                                                 <div class="jp-playlist">
-                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>Top 10</h2> <span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource(this)" data-value="/s1.ogg"  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value = "<%=Audio.find(1).path%>" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist"></span>
+                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>Top 5</h2> <span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource(this)" data-value="/s1.ogg"  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value = "<%=Audio.find(1).path%>" tabindex="0">1 <span class="jp-artist"></span>
                                                     </a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/georgia.ogg"tabindex="0">3. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">4. Maroon-Sugar <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">5. Pharrell-Williams <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">6. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">7. Pharrell-Williams <span class="jp-artist"></span></a></div></li></ul>
                                                 </div>
                                                 <br>
@@ -192,7 +194,7 @@
                                                     </div>
                                                     </li>
 
-    <% (2..(Playlist.count+1)).each do |i| %>
+    <% (6..(5+Playlist.count)).each do |i| %>
     <% if Playlist.find(i).user_id == @user.id %>
 
                                                 <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Playlist.find(i).path%>" tabindex="0"><%=Playlist.find(i).song%> <span class="jp-artist"></span></a>
@@ -231,44 +233,42 @@
                                                
                                                     
                                             <div class="clearfix"></div>
+
+                                            <br><br><br><br><br><br><br><br>
+
+
+
                 
                         
                         <div class="review-slider">
                                 <div class="tittle-head">
-                                    <h3 class="tittle">Featured Albums<br></h3>
+                                    <h3 class="tittle">Featured Albums<br><br></h3>
                                     <div class="clearfix"> </div>
                                 </div>
                                  <ul>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v1.jpg" id="arImg" alt=""/></a>
+                                    <%= link_to image_tag("Enrique", id: "arImg"), audio_path(:id => "Enrique",:uid => @user) %>
                                     <div class="slide-title"><h4></h4></div>
                                     
                                         
                                         
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v2.jpg" id="arImg" alt=""/></a>
+                                    <%= link_to image_tag("Adele", id: "arImg"), audio_path(:id => "Adele",:uid => @user) %>
                                     <div class="slide-title"><h4></h4></div>
                                     
                                         
                                         
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v3.jpg" id="arImg" alt=""/></a>
+                                    <%= link_to image_tag("Bruno Mars", id: "arImg"), audio_path(:id => "Bruno Mars",:uid => @user) %>
                                     <div class="slide-title"><h4></h4></div>
                                     
                                         
                                         
                                 </li>
                                 <li>
-                                    <a href="single.html"><img src="/assets/v4.jpg" id="arImg" alt=""/></a>
-                                    <div class="slide-title"><h4></h4></div>
-                                    
-                                        
-                                        
-                                </li>
-                                <li>
-                                    <a href="single.html"><img src="/assets/v5.jpg" id="arImg" alt=""/></a>
+                                    <%= link_to image_tag("Selena Gomez", id: "arImg"), audio_path(:id => "Selena Gomez",:uid => @user) %>
                                     <div class="slide-title"><h4></h4></div>
                                     
                                         

@@ -19,5 +19,13 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+  def full_title(page_title='')
+    base_title="Pulse"
+     if page_title.empty?
+        base_title
+        else
+              "#{page_title} | #{base_title}"
+            end
+    end
   
 end

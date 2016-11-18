@@ -8,6 +8,44 @@
   height: 500px;
 }
 
+#rbar{
+    
+    align: center;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    height: 100px;   
+    outline: none;
+    font-size: 1.00em;
+    color: #000000;
+    font-weight: 400;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    margin: 0 0 2em 0em;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+  
+}
+#rbar:focus{
+    border-color: #d6921e;
+
+    }
+
+.modal-content{
+  height: 300px;
+  width: 600px;
+}
+
+#review-form{
+  height: 1000px;
+
+}
 
 #sbar{
     

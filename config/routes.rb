@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   post '/add', to: 'songs#add'
   get '/search', to: 'search#showsearch'
+  post  '/review' , to: 'users#review'
+
   
   resources :users
   resources :audios do
@@ -22,5 +24,6 @@ Rails.application.routes.draw do
       put "like", to: "songs#upvote"
     end
   end
+
 end
 
