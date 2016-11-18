@@ -1,8 +1,22 @@
 class UsersController < ApplicationController
 
+
+  def review
+    
+    Review.create(post: params[:review])
+    
+    
+  end
+
   def show
-    @user = User.find(params[:id])
-    render layout: 'alt'
+    if !current_user.nil?
+           @user = User.find(params[:id])
+           render layout: 'alt'
+  else
+
+    flash[:notice] = "Sign In Please"
+    redirect_to root_path 
+  end
   end
 
   def new
@@ -21,8 +35,9 @@ class UsersController < ApplicationController
   end
   def edit
     @user = User.find(params[:id])
-    
+  
   end
+
    def update
     @user = User.find(params[:id])
     

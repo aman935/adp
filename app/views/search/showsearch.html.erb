@@ -1,4 +1,4 @@
-
+<% provide(:title, "Search results") %>
 
 <div class="audio-main w3ls">
 	
@@ -32,6 +32,11 @@
                                                     <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Audio.find(i).path%>" tabindex="0"><span id="songName"><%= Audio.find(i).name%></span></a>
 
                                                     <%= link_to "Add to playlist",add_path(:song => Audio.find(i).name,:path => Audio.find(i).path,:id => @u),:method => :post %>
+
+                                                    <%= link_to  like_audio_path(Audio.find(i)), method: :put do %>
+  Upvote
+						    <%= Audio.find(i).get_upvotes.size %>
+<% end %>
 
                                                     </div>
 

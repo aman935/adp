@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-
-
+<span style="color: white">
+<% if flash[:notice] %>
+    <div class="notice"><h1><%= flash[:notice] %></h1></div>
+  <% end %>
+</span>
 <div class="home">
 
-  <head>
-    <%= favicon_link_tag 'favicon.ico' %>
+<head>
 </head>
 
 

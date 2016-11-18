@@ -1,10 +1,16 @@
 class SongsController < ApplicationController
 
   def showAudio
+
+    if !current_user.nil?
     @str =  params[:id]
     @u = params[:uid]
     @count = Audio.count
   	render layout: 'alt'
+  else 
+    flash[:notice] = "Sign In Please"
+    redirect_to root_path 
+  end
   end
 
 

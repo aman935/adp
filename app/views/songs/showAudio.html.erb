@@ -1,72 +1,58 @@
-
+<% provide(:title, "Songs") %>
 <div class="audio-main w3ls">
 	
 	<div class="audio-record-list">
-	  <div class="profile">
-	    <div class="profile-top wthree">
-	      <div class="pic-sec">
-		<div class="pic">
-		  <img src="/assets/<%=@str%>.jpg" alt="<%=@str%>"/>
+	<div class="profile">
+			 <div class="profile-top wthree">
+				 <div class="pic-sec">
+					 <div class="pic">
+						 <img src="/assets/<%=@str%>.jpg" alt="<%=@str%>"/>
+					 </div>
+					 <div class="pic_info">
+						 <h2><%=@str%></h2>
+						 
+					 </div>
+					 <div class="clear"></div>
+				 </div>
+				 			 </div>
+		 </div>
+					
 		</div>
-		<div class="pic_info">
-		  <h2><%=@str%></h2>
-		  
-		</div>
-		<div class="clear"></div>
-	      </div>
-	    </div>
-	  </div>
-	  
-	</div>
-	
-	
 
-	<div class="jp-playlist2">
-	  <style>
-	    table.myTable { width:100%;
-	    border-collapse: separate;
-	    border-spacing: 10px;
-	    background-color:#EFEFEF;
-	    border:0;
-	    }
-	  </style>
-	    <table class="myTable" >
-	  <ul style="display: block;">
-	  
-            <% (1..@count).each do |i| %>
-            <% if Audio.find(i).artist  == @str or Audio.find(i).genre  == @str  %>
-            
-	    <tr>
-            <ul style="display: block;">
-              <li><div><td><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Audio.find(i).path%>" tabindex="0"><span id="songName"><%= Audio.find(i).name%></span></a></td>
-		  <td>
-		    <%= link_to '<font size="4">Add to playlist</font> <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>'.html_safe,add_path(:song => Audio.find(i).name,:path => Audio.find(i).path,:id => @u),:method => :post %>
-		  </td>
-		  <td>
-		    <%= link_to  like_audio_path(Audio.find(i)), method: :put do %>
-		  <font size="4">  Upvote </font><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
-	       <%= Audio.find(i).get_upvotes.size %>
-		  </td>
-		  
-	       <% end %>
-		</div>
-		
-           </li>
-	  </tr>	    
+       
+
+		<div class="jp-playlist2">
+		<ul style="display: block;">
+         <% (1..@count).each do |i| %>
+         <% if Audio.find(i).artist  == @str or Audio.find(i).genre  == @str  %>
+         
+
+                                                    <ul style="display: block;">
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Audio.find(i).path%>" tabindex="0"><span id="songName"><%= Audio.find(i).name%></span></a>
+
+                                                    <%= link_to "Add to playlist",add_path(:song => Audio.find(i).name,:path => Audio.find(i).path,:id => @u),:method => :post %>
+						    <%= link_to  like_audio_path(Audio.find(i)), method: :put do %>
+  Upvote
+						    <%= Audio.find(i).get_upvotes.size %>
+<% end %>
+                                                    </div>
+
+                                                    </li>
+
+
 
 
            <% else %>                                     
              
           <% end %>
-	  
+
           <% end %>
           
           
 
 
          
-            </ul>
-	    </table>
+          </ul>
         </div>
 
 
