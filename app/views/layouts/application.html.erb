@@ -3,8 +3,7 @@
 <html>
 <div class="app">
   <head>
-    <%= favicon_link_tag 'favicon.ico' %>
-    <title>nn</title>
+   <title><%=full_title(yield(:title))%></title>
     
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
