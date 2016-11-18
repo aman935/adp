@@ -177,8 +177,32 @@
                                                
                        
                                                 <div class="jp-playlist">
-                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>Top 5</h2> <span class="jp-artist"></span></a></div></li><li><div><a onclick="updateSource(this)" data-value="/s1.ogg"  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value = "<%=Audio.find(1).path%>" tabindex="0">1 <span class="jp-artist"></span>
-                                                    </a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/georgia.ogg"tabindex="0">3. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">4. Maroon-Sugar <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" onclick="updateSource(this)" data-value="/s1.ogg" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">5. Pharrell-Williams <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">6. Ellie-Goulding <span class="jp-artist"></span></a></div></li><li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="/s1.ogg" tabindex="0">7. Pharrell-Williams <span class="jp-artist"></span></a></div></li></ul>
+                                                    <ul style="display: block;"><li class="jp-playlist-current"><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item jp-playlist-current" tabindex="0"><h2>Editors Choice</h2> <span class="jp-artist"></span></a></div></li>
+
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%= Editor.find(1).path%>" tabindex="0">1.<%= Editor.find(1).song%><span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%= Editor.find(2).path%>" tabindex="0">2.<%= Editor.find(2).song%><span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%= Editor.find(3).path%>" tabindex="0">3.<%= Editor.find(3).song%><span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%= Editor.find(4).path%>" tabindex="0">4.<%= Editor.find(4).song%><span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+                                                    <li><div><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%= Editor.find(5).path%>" tabindex="0">5.<%= Editor.find(5).song%><p<span class="jp-artist"></span></a>
+                                                    </div>
+                                                    </li>
+
+
+
+
+                                                    </ul>
                                                 </div>
                                                 <br>
 

@@ -27,14 +27,14 @@
 	<div class="jp-playlist2">
 	  <style>
 	    table.myTable { 
-	    width:100%;
+
 	    border-collapse: separate;
 	    border-spacing: 10px;
 	    background-color:#EFEFEF;
 	    border:0;
 	    }
 	  </style>
-	    <table class="myTable" >
+	    <table class="myTable" 	    width="100%">
 	 
 	  
 		<ul style="display: block;">
@@ -46,11 +46,16 @@
                                                     <li><div><td><a  class="jp-playlist-item-remove" style="display: none;">×</a><a  class="jp-playlist-item" onclick="updateSource(this)" data-value="<%=Audio.find(i).path%>" tabindex="0"><span id="songName"><%= Audio.find(i).name%></span></a></td>
 <td>
                                                     <%= link_to '<font size="4">Add to playlist</font> <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>'.html_safe,add_path(:song => Audio.find(i).name,:path => Audio.find(i).path,:id => @u),:method => :post %> </td>
-
+	  <td>
+		    <%= link_to  like_audio_path(Audio.find(i)), method: :put do %>
+		  <font size="4">  Upvote </font><i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+	       <%= Audio.find(i).get_upvotes.size %>
+		  </td>
+		       <% end %>
                                                     </div>
 
                                                     </li>
-
+						    </tr>
 
 
 
@@ -59,5 +64,6 @@
           <% end %>
 
           <% end %>
-          
-          
+	  </ul>
+          </table>
+          </div>
